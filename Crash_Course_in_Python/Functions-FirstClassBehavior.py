@@ -15,3 +15,6 @@ x = apply_to_one(my_double)    # equals 2
 
 #Lambda functions: small anonymous functions defined with the lambda keyword
 y = apply_to_one(lambda x: x + 4)  # equals 5
+
+
+
