@@ -11,3 +11,13 @@ checkValExistence(dict1, "Dinindu")
 #Invalid value
 print("\n\nInvalid Value Check:")
 checkValExistence(dict1, "John")
+
+#get operator
+
+#Valid value
+print("\n\nValid Value Check:")
+print(dict1.get("Name",0))
+
+#Invalid value
+print("\n\nInvalid Value Check:")
+print(dict1.get("Address",0))
