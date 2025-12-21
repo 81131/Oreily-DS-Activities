@@ -7,5 +7,5 @@ def MaxFinder (num1: int, num2: int):
     else:
         return num2
 
-#Clrarly the function iswrong, but yet it execute. So we will add kind of a test subject to verify the functionality. 
+#Clearly the function iswrong, but yet it execute. So we will add kind of a test subject to verify the functionality. 
 assert MaxFinder(10,20) == 20, "Test with 10 vs 20 -> The 20 is larger but function did not get it correct"
