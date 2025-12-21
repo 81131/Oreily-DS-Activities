@@ -1,6 +1,6 @@
 def smallestItem(inputList: list):
-    assert inputList, "Empty list provided. Therefore no smallest items" 
     #Empty list -> False. Therefore if empty list provided function will throw an assertion error. 
+    assert inputList, "Empty list provided. Therefore no smallest items" 
     
     print("Minimum Value: ",min(inputList))
 
