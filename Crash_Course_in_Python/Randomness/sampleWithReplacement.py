@@ -38,4 +38,4 @@ def checkWinner(lotteryNumbers: list, winningNumbers: list):
     return winCount, moneyPool
 
 winCount, moneyPool = checkWinner(lotteryNumbers, winningNumbers)
-print(f"{winCount} numbers matched and you won ${moneyPool}!")
+print(f"{winCount} numbers matched and you won ${moneyPool}!" if winCount>0 else "Sorry! No numbers matched")
