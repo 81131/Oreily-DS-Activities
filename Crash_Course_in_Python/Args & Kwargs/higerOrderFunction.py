@@ -9,7 +9,7 @@ def doubler(f):
 def f1(x):
     return x + 1 
 
-#We catch that function here. Now g itself is a function --> doubler(x+1)
+#We catch that function here. Now g itself is a function --> doubler(f1)
 g = doubler(f1)
 
 #And we pass value 3 
