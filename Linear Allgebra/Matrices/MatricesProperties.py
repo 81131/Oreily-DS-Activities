@@ -53,5 +53,15 @@ mat1 = make_matrix(3,3, lambda i,j: i*j)
 def printMatrix(mat: Matrix) -> None:
     for vec in mat:
         print(*vec, "\n")
-
+print("Matrix 1:")
 printMatrix(mat1)
+print("\n\n")
+
+def identity_matrix(n: int) -> Matrix:
+    """Returns the n*n identity matrix"""
+    return make_matrix(n,n, lambda i,j: 1 if i==j else 0)
+
+mat2 = identity_matrix(5)
+print("Identity Matrix 1:")
+printMatrix(mat2)
+
