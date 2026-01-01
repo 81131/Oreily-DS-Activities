@@ -1,5 +1,6 @@
 from typing import List
 from typing import Tuple
+from typing import Callable
 
 Vector = List[float]
 Matrix = List[List[float]]
@@ -39,3 +40,18 @@ def get_column(Matrix1: Matrix, j:int) -> Vector:
     """Returns the jth column of a matrix as a vector"""
     return [Matrix1_i[j] for Matrix1_i in Matrix1]
 assert (get_column(A, 1)) == [2,5]
+
+def make_matrix(num_rows: int,
+                num_cols: int,
+                entry_fn: Callable[[int,int], float]) -> Matrix: #Callable[[int,int], float] means we are passing another function to the make matrix function.
+    return [[entry_fn(i,j)
+            for j in range(num_cols)]
+            for i in range(num_rows)]
+
+mat1 = make_matrix(3,3, lambda i,j: i*j)
+
+def printMatrix(mat: Matrix) -> None:
+    for vec in mat:
+        print(*vec, "\n")
+
+printMatrix(mat1)
