@@ -5,14 +5,17 @@ num_friends = [100.0,49,41,40,25,21,21,19,19,18,18,16,15,15,15,15,14,14,13,13,13
 
 #1. Mean(Average)
 def mean(dataset: List[float]) -> float:
+    """Returns the mean of provided dataset"""
     return sum(dataset) / len(dataset)
 
 #2. Median (Middle Value) - Changes on even sets and odd sets. So we define two separate functions and use them in a single function.
 def _medianOdd(dataset: List[float]) -> float:
+    """Returns the median of the provided dataset with *odd* number of elements"""
     #The list need to be sorted in order to get the mean value
     return sorted(dataset)[len(dataset)//2]
 
 def _medianEven(dataset: List[float]) -> float:
+    """Returns the median of the provided dataset with *even* number of elements"""
     #The list need to be sorted in order to get the mean value
     sortedDataet = sorted(dataset)
     hi_midpoint = len(dataset)//2
@@ -20,10 +23,13 @@ def _medianEven(dataset: List[float]) -> float:
     return (sortedDataet[lo_midpoint] + sortedDataet[hi_midpoint]) / 2
 
 def median(dataset: List[float]) -> float:
+    """Returns the median of the provided dataset with any number of elements"""
     return _medianEven(dataset) if len(dataset) % 2 == 0 else _medianOdd(dataset)
 
 
 #3. Quantile
 def quantile(dataset: List[float], p: float) -> float:
+    """Returns the p-th quantile of the provided dataset"""
     p_index = int(p * len(dataset))
     return sorted(dataset)[p_index]
+
