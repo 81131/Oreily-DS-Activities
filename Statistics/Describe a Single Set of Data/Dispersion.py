@@ -22,6 +22,7 @@ def data_range(dataset: List)-> float:
 
 
 #2. Variance (Measure for the spread of data points from the mean)
+#Formula = s² = Σ (xᵢ - x̄)² / (n - 1)
 #Helper function to get the datapoint - mean
 def _mean_dif(dataset: List[float]) -> float:
     """Translates the datapoints in the provided dataset to [(value_i - mean),..., (value_n - mean)]"""
