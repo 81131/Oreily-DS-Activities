@@ -11,6 +11,11 @@ num_friends = [100.0,49,41,40,25,21,21,19,19,18,18,16,15,15,15,15,14,14,13,13,13
 def mean(dataset: List[float]) -> float:
     """Returns the mean of provided dataset"""
     return sum(dataset) / len(dataset)
+
+def quantile(dataset: List[float], p: float) -> float:
+    """Returns the p-th quantile of the provided dataset"""
+    p_index = int(p * len(dataset))
+    return sorted(dataset)[p_index]
 #------------------------------------------------
 
 
@@ -43,6 +48,12 @@ def variance(dataset: List) -> float:
 
 
 #3. Standard Deviation (This is the square root of the variance)
-def standard_deviation(dataset: List) -> float: 
+def standard_deviation(dataset: List[float]) -> float: 
     """Returns the standard deviation for a given list"""
     return math.sqrt(variance(dataset))
+
+#4. Interquartile Range (IQR = Q3 - Q1)
+def interquartile_range(dataset: List[float]) -> float:
+    """Returns the interquartile range (IQR) of the given list"""
+    return quantile(dataset, 0.75) - quantile(dataset, 0.25)
+
