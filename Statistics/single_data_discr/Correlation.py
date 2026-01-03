@@ -3,6 +3,9 @@ from Linear_Algebra.Vectors.vectorProperties import dot
 from Statistics.single_data_discr.CentralTendencies import mean
 from Statistics.single_data_discr.Dispersion import _mean_dif
 
+
+#1. Covariance
+#Formula: Cov(X, Y) = Σ (xᵢ - x̄)(yᵢ - ȳ) / (n - 1)
 def covariance (dataset1: List[float], dataset2: List[float]) -> float:
     """Returns the covariance of the dataset1 & dataset2"""
     assert len(dataset1) == len(dataset2), "Both dataset lengths should be same"
