@@ -19,3 +19,11 @@ def _medianEven(dataset: List[float]) -> float:
     lo_midpoint = hi_midpoint - 1
     return (sortedDataet[lo_midpoint] + sortedDataet[hi_midpoint]) / 2
 
+def median(dataset: List[float]) -> float:
+    return _medianEven(dataset) if len(dataset) % 2 == 0 else _medianOdd(dataset)
+
+
+#3. Quantile
+def quantile(dataset: List[float], p: float) -> float:
+    p_index = int(p * len(dataset))
+    return sorted(dataset)[p_index]
