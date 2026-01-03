@@ -40,3 +40,8 @@ def mode(dataset: List[float]) -> List[float]:
     max_count = max(counts.values())
     return [x_i for x_i in counts.items if x_i == max_count]
 
+
+#5. Range (The max - min)
+def data_range(dataset: List)-> float:
+    """Returns the range of the given dataset"""
+    return max(dataset) - min(dataset)
