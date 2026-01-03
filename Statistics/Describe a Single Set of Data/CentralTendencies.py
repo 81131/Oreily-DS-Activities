@@ -33,3 +33,10 @@ def quantile(dataset: List[float], p: float) -> float:
     p_index = int(p * len(dataset))
     return sorted(dataset)[p_index]
 
+#4. Mode (Most appeared value/ values in the dataset)
+def mode(dataset: List[float]) -> List[float]:
+    """Returns the mode of the provided dataset as a list"""
+    counts = Counter(dataset)
+    max_count = max(counts.values())
+    return [x_i for x_i in counts.items if x_i == max_count]
+
