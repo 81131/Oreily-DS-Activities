@@ -14,7 +14,7 @@ def covariance (dataset1: List[float], dataset2: List[float]) -> float:
 #2. Correlation 
 #Formula: r = Cov(X, Y) / (σₓσᵧ)
 def correlation(dataset1: List[float], dataset2: List[float]) -> float:
-    """Measures how much dataset1 and dataset ]2 vary in tandem about their means"""
+    """Measures how much dataset1 and dataset2 vary in tandem about their means"""
     stdev_dataset1 = standard_deviation(dataset1)
     stdev_dataset2 = standard_deviation(dataset2)
     if stdev_dataset1> 0 and stdev_dataset2 > 0:
